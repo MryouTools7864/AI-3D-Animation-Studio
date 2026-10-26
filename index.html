@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Turn your stories into cartoon animation with AI 3D Animation Studio. Explore creative animation tools.">
+  <title>AI 3D Animation Studio | Story to Cartoon</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #f5f7ff;
+      line-height: 1.6;
+    }
+    header {
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      background: #111a30;
+      border-bottom: 1px solid #283451;
+    }
+    .logo { font-size: 20px; font-weight: bold; color: #8bdcff; }
+    nav a { color: #fff; text-decoration: none; margin-left: 14px; }
+    .hero { text-align: center; padding: 65px 20px 45px; }
+    .tag {
+      color: #8bdcff;
+      border: 1px solid #315b83;
+      padding: 6px 13px;
+      border-radius: 30px;
+      display: inline-block;
+    }
+    h1 { font-size: clamp(32px, 7vw, 54px); line-height: 1.15; }
+    .hero p { max-width: 650px; margin: 18px auto; color: #c5cde0; }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #6c63ff;
+      color: white;
+      border: 0;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    section { padding: 35px 6%; }
+    h2 { text-align: center; margin-bottom: 24px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #141e35;
+      padding: 22px;
+      border: 1px solid #293856;
+      border-radius: 15px;
+    }
+    .card h3 { color: #8bdcff; margin-top: 0; }
+    .form-wrap { max-width: 700px; margin: auto; }
+    label { display: block; margin: 15px 0 6px; font-weight: bold; }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #43516e;
+      background: #0b1020;
+      color: white;
+      font: inherit;
+    }
+    textarea { min-height: 130px; resize: vertical; }
+    .notice {
+      color: #c5cde0;
+      background: #101a30;
+      padding: 13px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    #message { margin-top: 15px; color: #8bdcff; }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #aeb8cf;
+      border-top: 1px solid #283451;
+    }
+    @media (max-width: 500px) {
+      nav a { margin-left: 8px; font-size: 14px; }
+      .hero { padding-top: 45px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🎬 AI 3D Animation Studio</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#create">Create</a>
+      <a href="#plans">Plans</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <span class="tag">YOUR STORY, YOUR IMAGINATION</span>
+      <h1>Turn Your Story Into a Cartoon Adventure</h1>
+      <p>Bring your imagination to life. Prepare your story, explore animation ideas, and take the first step toward creating your own cartoon.</p>
+      <a class="btn" href="#create">Start Your Story</a>
+    </div>
+
+    <section id="features">
+      <h2>Explore Your Creative Studio</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>✍️ Story to Cartoon</h3>
+          <p>Prepare a story for your future cartoon animation project.</p>
+        </div>
+        <div class="card">
+          <h3>🧑‍🚀 Character Ideas</h3>
+          <p>Plan characters, their appearance, personalities, and roles.</p>
+        </div>
+        <div class="card">
+          <h3>🎙️ Voice & Scenes</h3>
+          <p>Organize dialogue, narration, and scenes for your animation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="create">
+      <h2>Prepare Your Animation Story</h2>
+      <div class="form-wrap card">
+        <form id="storyForm">
+          <label for="storyTitle">Story title</label>
+          <input id="storyTitle" name="storyTitle" maxlength="100" placeholder="e.g. The Brave Little Hero" required>
+
+          <label for="style">Animation style</label>
+          <select id="style" name="style">
+            <option>3D Cartoon</option>
+            <option>Family Adventure</option>
+            <option>Fantasy</option>
+            <option>Educational Cartoon</option>
+          </select>
+
+          <label for="duration">Target video length</label>
+          <select id="duration" name="duration">
+            <option>30 seconds</option>
+            <option>1 minute</option>
+            <option>3 minutes</option>
+            <option>5 minutes</option>
+          </select>
+
+          <label for="story">Your story</label>
+          <textarea id="story" name="story" maxlength="10000" placeholder="Write your story and describe the characters and scenes..." required></textarea>
+
+          <button class="btn" type="submit">Prepare Story Brief</button>
+          <p id="message" role="status"></p>
+        </form>
+        <p class="notice">This first version prepares a story brief in your browser. It does not generate an AI video yet, and your story is not uploaded to an AI service.</p>
+      </div>
+    </section>
+
+    <section id="plans">
+      <h2>Choose Your Creative Journey</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Free Starter</h3>
+          <p>Explore story planning and prepare animation briefs.</p>
+          <p><strong>Free to use</strong></p>
+        </div>
+        <div class="card">
+          <h3>Professional</h3>
+          <p>Future plan for AI video generation, voice options, and advanced tools.</p>
+          <p>Paid features will be introduced after the required services are connected.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> AI 3D Animation Studio</p>
+    <p>Built for creative storytellers.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("storyForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const title = document.getElementById("storyTitle").value.trim();
+      const style = document.getElementById("style").value;
+      const duration = document.getElementById("duration").value;
+      const story = document.getElementById("story").value.trim();
+
+      if (!title || !story) {
+        document.getElementById("message").textContent =
+          "Please enter a story title and your story.";
+        return;
+      }
+
+      const brief = [
+        "AI 3D ANIMATION STUDIO - STORY BRIEF",
+        "",
+        "Title: " + title,
+        "Style: " + style,
+        "Target length: " + duration,
+        "",
+        "Story:",
+        story
+      ].join("\n");
+
+      const blob = new Blob([brief], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "animation-story-brief.txt";
+      link.click();
+      URL.revokeObjectURL(url);
+
+      document.getElementById("message").textContent =
+        "Your story brief has been prepared for download.";
+    });
+  </script>
+</body>
+</html>
